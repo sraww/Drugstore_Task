@@ -1,2 +1,1 @@
-Web store
-.
+Web store.
