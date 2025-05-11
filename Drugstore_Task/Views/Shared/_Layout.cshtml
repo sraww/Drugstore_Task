@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Drugstore_Task</title>
+    <link rel="stylesheet" href="~/Drugstore_Task.style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <main>
+        @RenderBody()
+
+        <div class="layout">
+            <header>
+                <span style="font-size:30px;">
+                    <span style="font-family:Times New Roman,Times,serif">
+                        <marquee height="40" width="1900" vspace="3" hspace="20" align="center">
+                            <b>Добро пожаловать!</b>
+                        </marquee>
+                    </span>
+                </span>
+            </header>
+
+            <nav>
+                <!-- Серверная форма поиска -->
+                <form class="form-search" method="get" action="/Search">
+                    <input type="text" name="q" placeholder="поиск..." />
+                    <input type="submit" value="Найти" />
+                </form>
+            </nav>
+
+            <main>
+                <section class="container">
+                    <section class="card__container">
+                        <div class="card__bx" style="--clr: #89ec5b">
+                            <div class="card__data">
+                                <div class="card__icon">
+                                    <i class="fa fa-paint-brush"></i>
+                                </div>
+                                <div class="card__content">
+                                    <h3>Проектирование</h3>
+                                    <p>Скоро</p>
+                                    <a href="#">Узнать больше</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card__bx" style="--clr: #eb5ae5">
+                            <div class="card__data">
+                                <div class="card__icon">
+                                    <i class="fa fa-code"></i>
+                                </div>
+                                <div class="card__content">
+                                    <h3>Разработка</h3>
+                                    <p>Скоро</p>
+                                    <a href="#">Узнать больше</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card__bx" style="--clr: #5b98eb">
+                            <div class="card__data">
+                                <div class="card__icon">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <div class="card__content">
+                                    <h3>Руководство</h3>
+                                    <p>Скоро</p>
+                                    <a href="#">Узнать больше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <article class="widget">Виджет</article>
+                <article class="statistics">Статистика</article>
+            </main>
+
+            <footer>
+                <a href="/">Главная</a>
+            </footer>
+        </div>
+    </main>
+</body>
+</html>

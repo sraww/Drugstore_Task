@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Результат поиска";
+}
+
+<h2>Результаты поиска</h2>
+
+@if (!string.IsNullOrWhiteSpace(ViewBag.Query))
+{
+    <p>Вы искали: <strong>@ViewBag.Query</strong></p>
+}
+else
+{
+    <p>Ничего не было введено.</p>
+}

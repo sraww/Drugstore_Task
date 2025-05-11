@@ -1,0 +1,109 @@
+﻿@model Feedback
+@{
+    ViewData["Contact"] = "Обратная связь";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Drugstore_Task</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/Drugstore_Task.style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    @*  <a href="/">Главная</a> *@
+    @*@ <a href="/Contact">Обратная связь</a> *@
+    <main>
+        @RenderBody()
+        @*Адаптивная верстка*@
+        <div class="layout">
+            <header>
+                <span style="font-size:30px;">
+                    <span style="font-family:Times New Roman,Times,serif">
+                        <marquee height="40" width="1900" vspace="3" hspace="20" align="center">
+                            <b>
+                                Добро пожаловать!
+                            </b>
+                        </marquee>
+                    </span>
+                </span>
+            </header>
+            @*Главная секция main*@
+            <main>
+                <section class="container">
+                    <section class="card__container">
+                        <div class="card__bx" style="--clr: #89ec5b">
+                            <div class="card__data">
+                                <div class="card__icon">
+                                    <i class="fa-solid fa-paintbrush"></i>
+                                </div>
+                                <div class="card__content">
+                                    <h3>Проектирование</h3>
+                                    <p>Скоро</p>
+                                    <a href="#">Узнать больше</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__bx" style="--clr: #eb5ae5">
+                            <div class="card__data">
+                                <div class="card__icon">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <div class="card__content">
+                                    <h3>Разработка</h3>
+                                    <p>Скоро</p>
+                                    <a href="#">Узнать больше</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__bx" style="--clr: #5b98eb">
+                            <div class="card__data">
+                                <div class="card__icon">
+                                    <i class="fa-brands fa-searchengin"></i>
+                                </div>
+                                <div class="card__content">
+                                    <h3>Руководство</h3>
+                                    <p>Скоро</p>
+                                    <a href="#">Узнать больше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                @*Нижняя часть main*@
+                <article class="widget">Виджет</article>
+                <article class="statistics">Статистика</article>
+            </main>
+
+    <h1>Обратная связь</h1>
+    <form method="post" asp-controller="Contact" asp-action="Check">
+        <label asp-for="Name"></label>
+        <input asp-formaction="Name" />
+        <span asp-asp-validation-for="Name"></span>
+
+        <label asp-for="Surname"></label>
+        <input asp-formaction="Surname" />
+        <span asp-asp-validation-for="Surname"></span>
+
+        <label asp-for="Age"></label>
+        <input asp-formaction="Age" />
+        <span asp-asp-validation-for="Age"></span>
+
+
+        <label asp-for="Email"></label>
+        <input asp-formaction="Email" />
+        <span asp-asp-validation-for="Email"></span>
+
+
+        <label asp-for="Message"></label>
+        <input asp-formaction="Message" />
+        <span asp-asp-validation-for="Message"></span>
+
+        <input type="submit" value="Отправить" />
+    </form>
+    <div>
+        @RenderBody()
+    </div>
+</body>

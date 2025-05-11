@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Главная страница";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Feedback
+@{
+    ViewData["Contact"] = "Обратная связь";
+}
+<form method="get" action="/Home/Search">
+    <input type="text" name="q" placeholder="Поиск..." />
+    <input type="submit" value="Найти" />
+</form>
+<h1>Скоро.</h1>
